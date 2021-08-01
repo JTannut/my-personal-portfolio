@@ -95,6 +95,25 @@
     }
   }
   
+@keyframes spring3 {
+    15% {
+      -webkit-transform-origin: center center;
+      -webkit-transform: scale(1.05, 1);
+    }
+    40% {
+      -webkit-transform-origin: center center;
+      -webkit-transform: scale(0.90, 0.90);
+    }
+    75% {
+      -webkit-transform-origin: center center;
+      -webkit-transform: scale(1, 0.95);
+    }
+    100% {
+      -webkit-transform-origin: center center;
+      -webkit-transform: scale(1, 1);
+    }
+  }
+  
 .hire-bt {
     animation: spring2 300ms ease-out;
     margin-bottom: 15px;
@@ -170,7 +189,7 @@ section{
     padding: 100px 0;
     background-color: #0B0c10;
 }
-.about, .services, .skills{
+.about, .services, .skills , .contacts , .contact2{
     font-family: "Poppins", sans-serif;
 }
 .about .title{
@@ -236,7 +255,7 @@ section{
     background:#45a29e;
     color: #fff;
     font-size: 20px;
-    padding: 1px 30px;
+    padding: 3px 30px;
     border-radius: 0.8em;
     font-weight: 500;
     margin-top: 15px;
@@ -385,6 +404,263 @@ section{
     width: calc(50% - 30px);
     
 }
+.skills .skills-content .left .text{
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #fff;
+}
+.skills .skills-content .left p{
+    font-size: 15px;
+    font-family: 'Ubuntu', sans-serif;
+    text-align: justify;
+    color: #fff;
+}
+.skills .skills-content .left a{
+    display: inline-block;
+    background:#45a29e;
+    color: #fff;
+    font-size: 18px;
+    padding: 5px 30px;
+    border-radius: 0.8em;
+    font-weight: 500;
+    margin-top: 15px;
+}
+.skills .skills-content .left a:hover{
+    animation: spring2 300ms ease-out;
+    color: #45a29e;
+    background: none;
+    border-radius: 0.8em;
+}
+
+.skills .skills-content .right .bars{
+    margin-bottom: 15px;
+}
+.skills .skills-content .right .info{
+    display: flex;
+    margin-bottom: 5px;
+    align-items: center;
+    justify-content: space-between;
+    color: #fff;
+}
+.skills .skills-content .right .span{
+    font-weight: 500;
+    font: 18px;
+    color: #fff;
+}
+.skills .skills-content .right .line{
+    height: 10px;
+    width: 100%;
+    background: #1f2833;
+    position: relative;
+}
+.skills .skills-content .right .line::before{
+   content: "";
+   position: absolute;
+   height: 100%;
+   width: 80%;
+   left: 0;
+   top: 0;
+   background: linear-gradient(to bottom right, #0B0c10 0%, #66fcf1 100%);
+}
+.skills .skills-content .right .html::before{
+    width: 50%;
+}
+.skills .skills-content .right .java::before{
+    width: 55%;
+}
+.skills .skills-content .right .css::before{
+    width: 60%;
+}
+.skills .skills-content .right .sql::before{
+    width: 60%;
+}
+
+
+/*  Contact section */
+
+.contacts{
+    margin-top: 100px;
+    color: #fff;
+    background: #1f2833;
+    width: 100%;
+    text-align: center;
+}
+.contacts .title::before{
+    background: #ffffff;
+}
+.contacts .title::after{
+    content: "contact";
+    background: #1f2833;
+}
+.contacts .carousel .card{
+    
+    border-radius: 20px;
+    padding:  25px 35px;
+    text-align: center;
+    transition:  color 0.4s ease;
+    
+    
+}
+.contacts .carousel .card p{
+    
+    text-shadow: 1px 3px 2px #1f2833;
+    
+}
+
+.contacts .carousel .card:hover{
+    background: #45a29e;
+    animation: spring3 300ms ease-out;
+}
+
+.contacts .carousel .card .text{
+    font-size:  25px;
+    font-weight: 500;
+    margin: 10px 0 7px 0;
+    text-shadow: 2px 3px 2px #1f2833;
+}
+.contacts .carousel .card .box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.contacts .carousel .card .box .textemail{
+    font-size: 15px;
+    
+}
+.contacts .carousel .card img{
+    height: 150px;
+    width: 150px;
+    object-fit: fill;
+    border-radius: 3em;
+    box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.3);
+}
+
+.contacts .carousel .card:hover img{
+    border-color: #1f2833;
+}
+.owl-dots{
+    text-align: center;
+    margin-top: 20px;
+}
+.owl-dot{
+    height: 13px;
+    width: 13px;
+    margin: 0 5px;
+    outline: none!important; /*  tmportant */
+    border-radius: 50%;
+    border: 2px solid #66fcf1!important;
+}
+.owl-dot.active{
+    width: 35px;
+    border-radius: 15px;
+}
+.owl-dot.active,.owl-dot:hover{
+    background: #66fcf1!important;
+}
+/* 
+/*  Contact2me section */
+/* .contact2 .title{
+    position: relative;
+    text-align: center;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 60px;
+    padding-bottom: 20px;
+    color: #fff;
+}
+
+.contact2 .title::after{
+    content: "get in touch";
+}
+.contact2 .contact2-content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.contact2 .contact2 .colum{
+    width: calc(50% - 30px);
+}
+.contact2 .contact2-content .left{
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    
+}
+.contact2 .contact2-content .left p{
+    text-align: justify;
+
+}
+.contact2 .contact2-content .left .icons{
+    margin: 10px 0;
+}
+.contact2 .contact2-content .row{
+    display: flex;
+    height: 65px;
+    align-items: center;
+}
+.contact2 .contact2-content .row .info{
+    margin-left: 30px;
+}
+.contact2 .contact2-content .row i{
+    font-size: 25px;
+    color: #66fcf1;
+}
+.contact2 .contact2-content .info .head{
+    font-weight: 500;
+}
+.contact2 .contact2-content .info .sub-title{
+    color: rgb(235, 228, 219);
+}
+.contact2 .right form .fields{
+    display: flex;
+}
+.contact2 .right form .field, .contact2 .right form .fields .field {
+    height: 45px;
+    width: 100%;
+    margin-bottom: 15px;
+}
+.contact2 .right form .fields .name{
+    margin-right: 10px;
+}
+
+.contact2 .right form .fields .email{
+    margin-right: 10px;
+}
+.contact2 .right form .fields .textarea{
+    height: 100px;
+}
+.contact2 .right form .fields input , .contact2 .right form .textarea textarea{
+    height: 100%;
+    width: 100%;
+    border: 1px solid lightblue;
+    background-origin: 6px;
+    outline: none;
+    padding: 0 15px;
+    font-size: 17px;
+    font-family: 'Poppins', sans-serif;
+
+}
+.contact2 .right form .textarea textarea{
+    padding-top: 10px;
+    resize: none;
+}
+.contact2 .right form .button{
+    height: 47px;
+    width: 100%;
+}
+.contact2 .right form .button{
+    width: 100%;
+    height: 100%;
+    border: 2px solid #66fcf1;
+    background: #66fcf1;
+    color: #fff;
+    font: 20px;
+    font-weight: 500;
+} */ 
 
 /*  responsive media query start */
 @media (max-width:1300px){
@@ -407,6 +683,9 @@ section{
     
     .max-width{
         padding: 0 50px;
+    }
+    .skills .skills-content .right .parti{
+        max-width: 450px;
     }
 }
 
@@ -469,8 +748,16 @@ section{
         margin-bottom: 20px;
         padding: 10px 23px ;
     }
+    .skills .skills-content .colum{
+        width: 100%;
+        padding: 10px 23px ;
+        margin-bottom: 25px;
+    }
+        
+    }
     .skills .skills-content .right .parti{
-        max-width: 500px;
+        max-width: 600px;
+        margin-bottom: 25px;
     }
 }
 @media (max-width:690px){
@@ -491,9 +778,12 @@ section{
         width: 100%;
         padding: 10px 23px ;
     }
-    .skills .skills-content .right .parti{
-        max-width: 500px;
+    .skills .skills-content .colum{
+        width: 100%;
+        padding: 10px 23px ;
+        
     }
+
     .skills .skills-content .right .parti{
         max-width: 300px;
     }
@@ -507,7 +797,7 @@ section{
         font-size: 25px;
     }
     .skills .skills-content .right .parti{
-        max-width: 250px;
+        max-width: 200px;
     }
 }
 
