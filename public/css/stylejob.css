@@ -444,7 +444,7 @@ section{
 }
 .skills .skills-content .right .span{
     font-weight: 500;
-    font: 18px;
+    font: 15px;
     color: #fff;
 }
 .skills .skills-content .right .line{
@@ -475,6 +475,77 @@ section{
     width: 60%;
 }
 
+.carouselskills .card{
+    width: 30%;
+    border-radius: 20px;
+    padding:  30px 10px;
+    text-align: center;
+    transition:  color 0.1s ease;
+    margin-left: 36%;
+}
+.carouselskills .card p{
+    
+    text-shadow: 1px 3px 2px #1f2833;
+    
+}
+
+.carouselskills .card .text{
+    color: #fff;
+    font-size:  20px;
+    font-weight: 500;
+    margin: 10px 0 7px 0;
+    text-shadow: 2px 3px 2px #1f2833;
+}
+.carouselskills .card .box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+.carouselskills .card .box .textemail{
+    font-size: 15px;
+    
+}
+.carouselskills .card img{
+    height: 100%;
+    width: 100%;
+    object-fit: fill;
+}
+
+.carouselskills .card:hover img{
+    border-color: #1f2833;
+}
+.owl-dots{
+    text-align: center;
+   
+}
+.owl-dot{
+    height: 5px;
+    width: 5px;
+    margin: 0 3px;
+    outline: none!important; /*  tmportant */
+    border-radius: 50%;
+    border: 2px solid #66fcf1!important;
+}
+.owl-dot.active{
+    width: 35px;
+    border-radius: 15px;
+}
+.owl-dot.active,.owl-dot:hover{
+    background: #66fcf1!important;
+}
+
+
+
+
+
+
+
+
+
+
+
 
 /*  Contact section */
 
@@ -492,8 +563,8 @@ section{
     content: "contact";
     background: #1f2833;
 }
+
 .contacts .carousel .card{
-    
     border-radius: 20px;
     padding:  25px 35px;
     text-align: center;
@@ -558,9 +629,80 @@ section{
 .owl-dot.active,.owl-dot:hover{
     background: #66fcf1!important;
 }
+
+
+/*  cert section */
+
+.certs{
+    margin-top: 100px;
+    color: #fff;
+    background: #1f2833;
+    width: 100%;
+    text-align: center;
+}
+.certs .title::before{
+    background: #ffffff;
+}
+.certs .title::after{
+    content: "certificate";
+    background: #1f2833;
+}
+.certs .carouselcert .cercard{
+    
+    border-radius: 20px;
+    padding:  25px 35px;
+    text-align: center;
+    transition:  color 0.4s ease;
+    
+    
+}
+.certs .carouselcert .cercard p{
+    
+    text-shadow: 1px 3px 2px #1f2833;
+    
+}
+
+.certs .carouselcert .cercard:hover{
+    background: #45a29e;
+    animation: spring3 300ms ease-out;
+}
+
+.certs .carouselcert .cercard .text{
+    font-size:  25px;
+    font-weight: 500;
+    margin: 10px 0 7px 0;
+    text-shadow: 2px 3px 2px #1f2833;
+}
+.certs .carouselcert .cercard .box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.certs .carouselcert .cercard img{
+    
+    object-fit: fill;
+    border-radius: 0.5em;
+    box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.3);
+}
+
+.certs .carouselcert .card:hover img{
+    border-color: #1f2833;
+}
+
 /* 
 /*  Contact2me section */
-/* .contact2 .title{
+
+
+.contact2{
+    margin-top: 30px;
+    color: #fff;
+    background: #1f2833;
+    width: 100%;
+
+}
+ .contact2 .title{
     position: relative;
     text-align: center;
     font-family: 'Ubuntu', sans-serif;
@@ -568,11 +710,12 @@ section{
     font-weight: 500;
     margin-bottom: 60px;
     padding-bottom: 20px;
-    color: #fff;
+    color: #66fcf1;
 }
 
 .contact2 .title::after{
-    content: "get in touch";
+    content: "";
+    background: #1f2833;
 }
 .contact2 .contact2-content{
     display: flex;
@@ -584,18 +727,19 @@ section{
     width: calc(50% - 30px);
 }
 .contact2 .contact2-content .left{
-    font-size: 20px;
-    font-weight: 600;
+    font-size: 17px;
+    font-weight: 10;
     margin-bottom: 10px;
     
 }
 .contact2 .contact2-content .left p{
-    text-align: justify;
+    text-align: center;
 
 }
 .contact2 .contact2-content .left .icons{
     margin: 10px 0;
 }
+
 .contact2 .contact2-content .row{
     display: flex;
     height: 65px;
@@ -612,54 +756,9 @@ section{
     font-weight: 500;
 }
 .contact2 .contact2-content .info .sub-title{
-    color: rgb(235, 228, 219);
-}
-.contact2 .right form .fields{
-    display: flex;
-}
-.contact2 .right form .field, .contact2 .right form .fields .field {
-    height: 45px;
-    width: 100%;
-    margin-bottom: 15px;
-}
-.contact2 .right form .fields .name{
-    margin-right: 10px;
+    color: rgb(255, 255, 255);
 }
 
-.contact2 .right form .fields .email{
-    margin-right: 10px;
-}
-.contact2 .right form .fields .textarea{
-    height: 100px;
-}
-.contact2 .right form .fields input , .contact2 .right form .textarea textarea{
-    height: 100%;
-    width: 100%;
-    border: 1px solid lightblue;
-    background-origin: 6px;
-    outline: none;
-    padding: 0 15px;
-    font-size: 17px;
-    font-family: 'Poppins', sans-serif;
-
-}
-.contact2 .right form .textarea textarea{
-    padding-top: 10px;
-    resize: none;
-}
-.contact2 .right form .button{
-    height: 47px;
-    width: 100%;
-}
-.contact2 .right form .button{
-    width: 100%;
-    height: 100%;
-    border: 2px solid #66fcf1;
-    background: #66fcf1;
-    color: #fff;
-    font: 20px;
-    font-weight: 500;
-} */ 
 
 /*  responsive media query start */
 @media (max-width:1300px){
@@ -753,7 +852,7 @@ section{
         margin-bottom: 25px;
     }
         
-    }
+    
     .skills .skills-content .right .parti{
         max-width: 600px;
         margin-bottom: 25px;
