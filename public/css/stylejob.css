@@ -917,7 +917,7 @@ section{
     .home {
         display: flex;
         background: url("../image/job01.JPG") no-repeat center;
-        background-size: auto;
+        background-size: fill;
         background-attachment: fixed;
         height: 50vh;
         color: rgb(255, 255, 255);
