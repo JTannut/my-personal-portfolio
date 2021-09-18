@@ -917,7 +917,7 @@ section{
     .home {
         display: flex;
         background: url("../image/job01.JPG") no-repeat center;
-        background-size: fill;
+        background-size: cover;
         background-attachment: fixed;
         height: 50vh;
         color: rgb(255, 255, 255);
@@ -926,7 +926,35 @@ section{
     }
 }
 
-
+@media(min-width: 428px),(max-width: 767px) { 
+    /* Your Styles... */ 
+    .menu-btn{
+        display: block;
+        z-index: 999;
+    }
+    .menu-btn i.active::before{
+        content: "\f00d";
+    }
+    .home .home-content .text-2{
+        font-size: 50px;
+    }
+    .home .home-content .text-3{
+        font-size: 25px;
+    }
+    .skills .skills-content .right .parti{
+        max-width: 200px;
+    }
+    .home {
+        display: flex;
+        background: url("../image/job01.JPG") no-repeat center;
+        background-size: cover;
+        background-attachment: fixed;
+        height: 50vh;
+        color: rgb(255, 255, 255);
+        min-height: 800px;
+        font-family: 'Poppins', sans-serif;
+    }
+}
 .parti{
     max-width: 700px;
     height: 85%;
