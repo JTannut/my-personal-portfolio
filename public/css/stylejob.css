@@ -862,6 +862,13 @@ section{
     }
 }
 @media (max-width:690px){
+    .menu-btn{
+        display: block;
+        z-index: 999;
+    }
+    .menu-btn i.active::before{
+        content: "\f00d";
+    }
     .max-width{
         padding:  0 23px;
     }
@@ -891,6 +898,13 @@ section{
 }
 
 @media (max-width:400px){
+    .menu-btn{
+        display: block;
+        z-index: 999;
+    }
+    .menu-btn i.active::before{
+        content: "\f00d";
+    }
     .home .home-content .text-2{
         font-size: 50px;
     }
@@ -903,7 +917,7 @@ section{
     .home {
         display: flex;
         background: url("../image/job01.JPG") no-repeat center;
-        background-size: 700px;
+        background-size: cover;
         background-attachment: fixed;
         height: 50vh;
         color: rgb(255, 255, 255);
