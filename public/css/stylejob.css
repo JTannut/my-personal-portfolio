@@ -15,7 +15,17 @@
 html{
     scroll-behavior: smooth;
 }
-
+/* progress bar*/
+#progressbar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 5px;
+    background: linear-gradient(to right, #86E3CE 0%, #45a29e 100%);
+    width: 0%;
+    z-index: 999;
+    transition: width 0.2s ease-out;
+}
 /* navbar */
 .navbar{
     position: fixed;
@@ -29,6 +39,7 @@ html{
 .navbar.sticky{
     padding: 10px 0;
     background: #0B0c10;
+    z-index: 500;
 }
 .navbar .max-width{
     display: flex;
@@ -191,6 +202,7 @@ html{
 section{
     padding: 100px 0;
     background-color: #0B0c10;
+    box-shadow: 0 0 100px 40px rgba(0, 0, 0, 0.3);
 }
 .about, .services, .skills , .contacts , .contact2{
     font-family: "Poppins", sans-serif;
