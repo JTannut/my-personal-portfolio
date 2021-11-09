@@ -5,7 +5,7 @@
     padding: 0;
     box-sizing: border-box;
     text-decoration: none;
-    
+    font-family: 'Poppins', sans-serif;
 }
 .max-width{
     max-width: 1300px;
@@ -210,7 +210,7 @@ section{
 .about .title{
     position: relative;
     text-align: center;
-    font-family: 'Ubuntu', sans-serif;
+    font-family: 'Poppins', sans-serif;
     font-size: 40px;
     font-weight: 500;
     margin-bottom: 60px;
@@ -298,7 +298,7 @@ section{
 .services .title{
     position: relative;
     text-align: center;
-    font-family: 'Ubuntu', sans-serif;
+    font-family: 'Poppins', sans-serif;
     font-size: 40px;
     font-weight: 500;
     margin-bottom: 60px;
@@ -324,7 +324,7 @@ section{
     left: 50%;
     font-size: 20px;
     color: #66fcf1;
-    padding: 5px;
+    padding: 1px;
     background: #1f2833;
     transform: translateX(-50%);
 }
@@ -374,12 +374,176 @@ section{
     margin: 10px 0 7px 0;
 }
 
+/* project section */
+.project .title{
+    position: relative;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 60px;
+    padding-bottom: 20px;
+    color: #fff;
+
+}
+.project .title::before{
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    width: 180px;
+    height: 1.5px;
+    background: #fff;
+    transform: translateX(-50%);
+
+}
+.project .title::after{
+    content: "";
+    position: absolute;
+    bottom: -13px;
+    left: 50%;
+    font-size: 20px;
+    color: #66fcf1;
+    padding: 5px;
+    background: #0B0c10;
+    transform: translateX(-50%);
+}
+.project .project-content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.project .project-content .colum{
+    width: calc(50% - 30px);
+    
+}
+.project .project-content .left .text{
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #fff;
+}
+.project .project-content .left p{
+    font-size: 15px;
+    font-family: 'Poppins', sans-serif;
+    text-align: justify;
+    color: #fff;
+}
+.project .project-content .left a{
+    display: inline-block;
+    background:#45a29e;
+    color: #fff;
+    font-size: 18px;
+    padding: 5px 30px;
+    border-radius: 0.8em;
+    font-weight: 500;
+    margin-top: 15px;
+}
+.project .project-content .left a:hover{
+    animation: spring2 300ms ease-out;
+    color: #45a29e;
+    background: none;
+    border-radius: 0.8em;
+}
+.project .project-content .right .bars{
+    margin-bottom: 15px;
+}
+.project .project-content .right .info{
+    display: flex;
+    margin-bottom: 5px;
+    align-items: center;
+    justify-content: space-between;
+    color: #fff;
+}
+.project .project-content .right .span{
+    font-weight: 500;
+    font: 15px;
+    color: #fff;
+}
+.project .project-content .right .line{
+    height: 10px;
+    width: 100%;
+    background: #1f2833;
+    position: relative;
+}
+.project .project-content .right .line::before{
+   content: "";
+   position: absolute;
+   height: 100%;
+   width: 80%;
+   left: 0;
+   top: 0;
+   background: linear-gradient(to bottom right, #0B0c10 0%, #66fcf1 100%);
+}
+.carouselproject .card{
+    width: 30%;
+    border-radius: 20px;
+    padding:  30px 10px;
+    text-align: center;
+    transition:  color 0.1s ease;
+    margin-left: 36%;
+}
+.carouselproject .card p{
+    
+    text-shadow: 1px 3px 2px #1f2833;
+    
+}
+
+.carouselproject .card .text{
+    color: #fff;
+    font-size:  20px;
+    font-weight: 500;
+    margin: 10px 0 7px 0;
+    text-shadow: 2px 3px 2px #1f2833;
+}
+.carouselproject .card .box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+.carouselproject .card .box .textemail{
+    font-size: 15px;
+    
+}
+.carouselproject .card img{
+    height: 100%;
+    width: 100%;
+    object-fit: fill;
+}
+
+.carouselproject .card:hover img{
+    border-color: #1f2833;
+}
+.owl-dots{
+    text-align: center;
+   
+}
+.owl-dot{
+    height: 5px;
+    width: 5px;
+    margin: 0 3px;
+    outline: none!important; /*  tmportant */
+    border-radius: 50%;
+    border: 2px solid #66fcf1!important;
+}
+.owl-dot.active{
+    width: 35px;
+    border-radius: 15px;
+}
+.owl-dot.active,.owl-dot:hover{
+    background: #66fcf1!important;
+}
+
+
 
 /* skills section */
 .skills .title{
     position: relative;
     text-align: center;
-    font-family: 'Ubuntu', sans-serif;
+    font-family: 'Poppins', sans-serif;
     font-size: 40px;
     font-weight: 500;
     margin-bottom: 60px;
@@ -427,7 +591,7 @@ section{
 }
 .skills .skills-content .left p{
     font-size: 15px;
-    font-family: 'Ubuntu', sans-serif;
+    font-family: 'Poppins', sans-serif;
     text-align: justify;
     color: #fff;
 }
@@ -553,29 +717,21 @@ section{
 
 
 
-
-
-
-
-
-
-
-
-
 /*  Contact section */
 
 .contacts{
-    margin-top: 100px;
+    margin-top: auto;
     color: #fff;
     background: #1f2833;
     width: 100%;
     text-align: center;
+    font-family: 'Poppins', sans-serif;
 }
 .contacts .title::before{
     background: #ffffff;
 }
 .contacts .title::after{
-    content: "contact";
+    content: "";
     background: #1f2833;
 }
 
@@ -603,6 +759,7 @@ section{
     font-weight: 500;
     margin: 10px 0 7px 0;
     text-shadow: 2px 3px 2px #1f2833;
+    font-family: 'Poppins', sans-serif;
 }
 .contacts .carousel .card .box{
     display: flex;
@@ -649,11 +806,12 @@ section{
 /*  cert section */
 
 .certs{
-    margin-top: 100px;
+    margin-top: auto;
     color: #fff;
     background: #1f2833;
     width: 100%;
     text-align: center;
+
 }
 .certs .title::before{
     background: #ffffff;
@@ -668,7 +826,7 @@ section{
     padding:  25px 35px;
     text-align: center;
     transition:  color 0.4s ease;
-    
+   
     
 }
 .certs .carouselcert .cercard p{
@@ -680,6 +838,7 @@ section{
 .certs .carouselcert .cercard:hover{
     background: #45a29e;
     animation: spring3 300ms ease-out;
+   
 }
 
 .certs .carouselcert .cercard .text{
@@ -693,6 +852,7 @@ section{
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    
 }
 
 .certs .carouselcert .cercard img{
@@ -708,10 +868,8 @@ section{
 
 /* 
 /*  Contact2me section */
-
-
 .contact2{
-    margin-top: 30px;
+    margin-top: auto;
     color: #fff;
     background: #1f2833;
     width: 100%;

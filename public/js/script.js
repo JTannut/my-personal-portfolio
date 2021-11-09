@@ -15,7 +15,7 @@ $(document).ready(function(){
    //owl carousel script//
    $('.carousel').owlCarousel({
     margin: 20,
-    loop: true,
+    loop: false,
     autoplayTimeOut: 2000,
     autoplayHoverPause: true,
     responsive: {
@@ -55,7 +55,7 @@ $(document).ready(function(){
    });
    $('.carouselcert').owlCarousel({
     margin: 20,
-    loop: true,
+    loop: false,
     autoplayTimeOut: 2000,
     autoplayHoverPause: true,
     responsive: {
@@ -69,6 +69,26 @@ $(document).ready(function(){
         },
         1000:{
             items: 2,
+            nav: false
+        }
+    }
+   });
+   $('.carouselproject').owlCarousel({
+    margin: 10,
+    loop: true,
+    autoplayTimeOut: 2000,
+    autoplayHoverPause: true,
+    responsive: {
+        0:{
+            items: 1,
+            nav: false
+        },
+        600:{
+            items: 1,
+            nav: false
+        },
+        1000:{
+            items: 1,
             nav: false
         }
     }

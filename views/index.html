@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/stylejob.css" >
+    <link rel="stylesheet" href="css/chat.css" >
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <title>Personal Portfolio</title>
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
@@ -21,8 +22,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"/>
 </head>
 <body>
+    <!-- progress-bar -->
     <div id="progressbar"> </div>
+
+
     
+    <!-- navbar -->
     <nav class="navbar">
         <div class="max-width">
             <div class="logo"><a href="#">PORTFO<span>LIO.</span></a></div>
@@ -37,8 +42,52 @@
             <div class="menu-btn"><i class="fas fa-bars"></i></div>
         </div>
     </nav>
-    <!-- progress-bar -->
     
+     <!-- CHAT BAR  -->
+     <div class="chat-bar-collapsible">
+        <button id="chat-button" type="button" class="collapsible">
+            <i class='fab fa-facebook-messenger' style='font-size:60px'></i>
+        </button>
+
+        <div class="content">
+            <div class="full-chat-block">
+                <!-- Message Container -->
+                <div class="outer-container">
+                    <div class="chat-container">
+                        <!-- Messages -->
+                        <div id="chatbox">
+                            <h5 id="chat-timestamp"></h5>
+                            <p id="botStarterMessage" class="botText"><span>Loading...</span></p>
+                        </div>
+
+                        <!-- User input box -->
+                        <div class="chat-bar-input-block">
+                            <div id="userInput">
+                                <input id="textInput" class="input-box" type="text" name="msg"
+                                    placeholder="send a message">
+                                <p></p>
+                            </div>
+
+                            <div class="chat-bar-icons">
+                                <i id="chat-icon" style="color: crimson;" class="fa fa-fw fa-heart"
+                                    onclick="heartButton()"></i>
+                                <i id="chat-icon" style="color: #333;" class="fa fa-paper-plane" aria-hidden="true"
+                                    onclick="sendButton()"></i>
+                            </div>
+                        </div>
+
+                        <div id="chat-bar-bottom">
+                            <p></p>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
     <!--  home section start here -->
     <section class="home" id="home">
         <div class="max-width">
@@ -105,10 +154,11 @@
     </section>
 
     <!-- services section start here -->
-<section class="skills" id="skills">
-    <div class="max-width">
+    <section class="skills" id="skills">
+     <div class="max-width">
         <h2 class="title">My skills</h2>
         <div class="skills-content">
+
         <div class="colum left">
              <div class="text">My creative skills & exprirances.</div>
              <p>Programming Skills : Node.js, Django, Python, Html, CSS, Vue.js, SQL
@@ -121,44 +171,9 @@
                     <p>Technologically competent</p>
              
         </div>
-
+        
 
         <div class="colum right">
-
-            <!--
-
-            
-                <div class="bars"> 
-                    <div class="info">
-                        <span>HTML</span>
-                        <span>50%</span>
-                    </div>
-                    
-                </div>
-                <div class="line html"></div>
-               <div class="bars"> 
-                    <div class="info">
-                        <span>Javascript</span>
-                        <span>55%</span>
-                    </div>
-                </div>
-                <div class="line java"></div>
-                <div class="bars"> 
-                    <div class="info">
-                        <span>CSS</span>
-                        <span>60%</span>
-                    </div>
-                </div>
-                <div class="line css"></div>
-                <div class="bars"> 
-                    <div class="info">
-                        <span>MySQL</span>
-                        <span>60%</span>
-                    </div>
-                    <div class="line sql"></div>
-                </div>
-
-                -->
                 <div class="carouselskills owl-carousel">
                     <div class="card">
                         <div class="box">
@@ -203,15 +218,43 @@
                         </div>
                     </div>
                 </div>
+            </div>
+    </section>
+                <!--    project gallary-->
+            <section class="project" id="project">
+                <div class="max-width">
+                    <h2 class="title">My gallary project</h2>
+                    <div class="carouselproject owl-carousel">
+                        <div class="projectcard">
+                            <div class="projectbox">
+                                <div class="project-content">
 
+                                     <div class="colum left">
+                                       <div class="text">Login page</div>
+                                            <p>used html and css to create web login page
+                                            </p>
+                                        </div>
+
+                                        <div class="colum right">
+                                            <div class="card">
+                                                    <div class="box">
+                                                    <img src="https://www.img.in.th/images/9ba0501b275070c98bb552e44490baf0.png" alt="">
+                                                    <di class="text">CSS</di> 
+                                                    </div>
+                                            </div>
+                                        
+                                </div>
+                            </div>
+                        </div>
+                     </div>
+            </section>
                   <!-- particle section start here -->
         <div class="parti" id="particles-js"></div>
-        </div>
         
         <!-- contact section start here -->
         <section class="contacts" id="contacts">
             <div class="max-width">
-                <h2 class="title">My contact</h2>
+                <h2 class="title">My Contact</h2>
                 <div class="carousel owl-carousel">
                     <div class="card">
                         <div class="box">
@@ -244,6 +287,7 @@
                 </div>
             </div>
         </section>
+
         <!-- certificate section start here -->
         <section class="certs" id="certss">
             <div class="max-width">
@@ -255,9 +299,17 @@
                         <di class="text">CompTIA</di>
                         <p>Cloud Essential</p> 
                         </div>
-                </div>
+                    </div>
+                    <div class="cercard">
+                        <div class="cerbox">
+                        <img src="../image/psumooc01.jpg" alt="">
+                        <di class="text">PSUMOOC</di>
+                        <p>กระบวนการคิดวิเคราะห์ (Critical Thinking)</p> 
+                        </div>
+                    </div>
             </div>
         </section>
+
         <!-- contact 2  section start here -->
           <section class="contact2" id="contact2">
             <div class="max-width">
@@ -290,13 +342,15 @@
                     
                 </div>
             </div>
-        </section>
+            </section>
 
 
-        </div>
-    </div>
-</section>
+    
+        
+   
 
+    <script type="text/javascript" src="/js/responses.js"></script>
+    <script type="text/javascript" src="/js/chat.js"></script>
     <script type="text/javascript" src="/js/script.js"></script>
     <script type="text/javascript" src="/js/app.js"></script>
     <script type="text/javascript" src="/js/particles.js"></script>
