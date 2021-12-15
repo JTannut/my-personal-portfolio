@@ -1,3 +1,20 @@
+const progressbar = document.querySelector('#progressbar');
+const section = document.querySelector("section");
+
+const animateprogressbar = () =>{
+  let scrollDistance = -section.getBoundingClientRect().top;
+  let progresswidth = (scrollDistance / (section.getBoundingClientRect().height - document.documentElement.clientHeight)) * 2;
+let value = Math.floor(progresswidth);
+progressbar.style.width = value + "%";
+  if(value < 0 ){
+    progressbar.style.width = "0%";
+  }
+};
+window.addEventListener("scroll", animateprogressbar);
+
+
+
+
 $(document).ready(function(){
     $(window).scroll(function(){
         if(this.scrollY > 20 ){
@@ -94,18 +111,3 @@ $(document).ready(function(){
     }
    });
 });
-
-
-const progressbar = document.querySelector('#progressbar');
-const section = document.querySelector("section");
-
-const animateprogressbar = () =>{
-  let scrollDistance = -section.getBoundingClientRect().top;
-  let progresswidth = (scrollDistance / (section.getBoundingClientRect().height - document.documentElement.clientHeight)) * 2;
-let value = Math.floor(progresswidth);
-progressbar.style.width = value + "%";
-  if(value < 0 ){
-    progressbar.style.width = "0%"
-  }
-};
-window.addEventListener("scroll", animateprogressbar);
