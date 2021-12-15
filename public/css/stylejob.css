@@ -405,7 +405,6 @@ section{
     font-size: 20px;
     color: #66fcf1;
     padding: 5px;
-    background: #0B0c10;
     transform: translateX(-50%);
 }
 .project .project-content{
@@ -1137,7 +1136,12 @@ section{
     
 
 /*      grid         */
-
+.project{
+    background: url("../image/bg.JPG") no-repeat center;
+    background-size: cover;
+    background-attachment: center;
+    
+}
 html {
     box-sizing: border-box;
   }
@@ -1190,9 +1194,11 @@ html {
   
   .tile-link {
     display: block;
+     box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.3);
   }
   
   .tile-link:hover .tile-img {
+      
     opacity: 1;
   }
   
@@ -1205,6 +1211,7 @@ html {
   }
   
   .tile-img {
+      
     display: block;
     width: 100%;
     height: auto;
